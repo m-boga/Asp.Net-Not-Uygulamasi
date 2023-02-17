@@ -1,0 +1,64 @@
+﻿@using NotUygulamasıUnited.Models
+@model List<NotUygulamasıUnited.Models.Not>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Notlar</h2>
+
+<p>
+    @Html.ActionLink("Yeni Not Ekle", "Yeni")
+</p>
+
+<ul>
+    @foreach (var not in Model.Where(n => n.UstNotId == null))
+    {
+        @Html.Partial("_NotAgaci", not)
+    }
+</ul>
+
+ <!-- Tablo Şeklinde -->
+    <table class="table">
+        <tr>
+            <th>
+                Başlık
+            </th>
+            <th>
+                İçerik
+            </th>
+            <th>
+                Üst Not
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Icerik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UstNot.Icerik)
+                </td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Duzenle", new { id = item.NotId }) |
+                    @*@using (Html.BeginForm("Sil", "Not", new { id = item.NotId }, FormMethod.Post))
+                    {
+                        <input type="submit" value="Evet, Sil" class="btn btn-danger" />
+                        @Html.ActionLink("Hayır, İptal Et", "Index", null, new { @class = "btn btn-default" })
+                    }*@
+                    
+                    @Html.ActionLink("Sil", "Sil", new { id = item.NotId }) |
+                    @*<a href="@Url.Action("Sil", "Not", new { id = item.NotId })" class="btn btn-danger">Sil</a>*@
+                    @Html.ActionLink("Yeni Not Ekle", "Yeni")
+                </td>
+            </tr>
+
+        }
+    </table>
+

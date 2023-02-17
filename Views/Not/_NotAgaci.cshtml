@@ -1,0 +1,24 @@
+﻿@model NotUygulamasıUnited.Models.Not
+@{
+    ViewBag.Title = "_NotAgaci";
+}
+
+
+<li>
+    <h4>@Html.DisplayFor(model => model.Baslik)</h4>
+    <div>@Html.DisplayFor(model => model.Icerik)</div>
+    <p>
+        @Html.ActionLink("Düzenle", "Duzenle", new { id = Model.NotId }) | <!-- Notu düzenlemek için YeniNot aksiyonuna yönlendirilir -->
+        @Html.ActionLink("Sil", "Sil", new { id = Model.NotId }) <!-- Notu silmek için Sil aksiyonuna yönlendirilir -->
+    </p>
+    @if (Model.AltNotlar.Any())
+    {
+        <ul>
+            @foreach (var altNot in Model.AltNotlar)
+            {
+                @Html.Partial("_NotAgaci", altNot)
+            }
+        </ul>
+    }
+</li>
+

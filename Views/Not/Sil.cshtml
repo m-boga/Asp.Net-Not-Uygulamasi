@@ -1,0 +1,15 @@
+﻿@model NotUygulamasıUnited.Models.Not
+
+<h2>Not Sil</h2>
+
+<p>Notu silmek istediğinize emin misiniz?</p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Sil" class="btn btn-default" /> |
+        @Html.ActionLink("Geri", "Index")
+    </div>
+}
