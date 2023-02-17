@@ -1,10 +1,12 @@
 NOT UYGULAMASI
+
 Ekle
 Sil 
 Güncelle
 Listele
 
 Kullanılan Teknolojiler
+
 Asp.net Mvc - MsSQL - Code First
 
 # NotUygulamasıUnited![Ekran görüntüsü 2023-02-17 224712](https://user-images.githubusercontent.com/104066754/219776252-2e396d18-9306-4a19-8e4c-976ff9a676b8.png)
