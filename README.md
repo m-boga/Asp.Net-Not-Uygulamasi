@@ -5,7 +5,7 @@ Güncelle
 Listele
 
 Kullanılan Teknolojiler
-Asp.net Mvc - MsSQL
+Asp.net Mvc - MsSQL - Code First
 
 # NotUygulamasıUnited![Ekran görüntüsü 2023-02-17 224712](https://user-images.githubusercontent.com/104066754/219776252-2e396d18-9306-4a19-8e4c-976ff9a676b8.png)
 ![Ekran görüntüsü 2023-02-17 224643](https://user-images.githubusercontent.com/104066754/219776272-8ad16488-2733-4d7b-a90d-7951d68b950f.png)
